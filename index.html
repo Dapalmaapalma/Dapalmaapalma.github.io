@@ -1,99 +1,147 @@
 <!DOCTYPE html>
 <html lang="it">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Da Palma a Palma</title>
-</head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Da Palma a Palma</title>
 
-<body style="
-  margin:0;
-  font-family:Arial, sans-serif;
-  text-align:center;
-  min-height:100vh;
-  display:flex;
-  justify-content:center;
-  align-items:flex-start;
-  background-image:url('logo.png');
-  background-size:cover;
-  background-position:center;
-  background-repeat:no-repeat;
-">
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 
-  <div style="
+body{
+    font-family:Arial,sans-serif;
+    background:#e6cfab;
+    overflow:hidden;
+}
+
+.bg{
+    position:fixed;
+    inset:0;
+    width:100%;
+    height:100%;
+    object-fit:contain;
+    object-position:center center;
+    z-index:-1;
+}
+
+.container{
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    padding-top:70px;
+    text-align:center;
+}
+
+.content{
     width:90%;
     max-width:420px;
-    margin-top:80px;
-  ">
+}
 
-    <h1 style="
-      font-size:28px;
-      margin-bottom:12px;
-      color:#111;
-      text-shadow:0 0 4px rgba(255,255,255,0.6);
-    ">
-      Manutenzione e abbattimento palme
-    </h1>
+h1{
+    font-size:42px;
+    color:#111;
+    margin-bottom:18px;
+}
 
-    <p style="
-      font-size:17px;
-      font-weight:bold;
-      margin-bottom:12px;
-      color:#1d4f2f;
-    ">
-      info@dapalmaapalma.ch
-    </p>
+.email{
+    color:#1d4f2f;
+    font-weight:bold;
+    font-size:24px;
+    margin-bottom:18px;
+}
 
-    <a href="mailto:info@dapalmaapalma.ch" style="
-      display:block;
-      background:rgba(255,255,255,0.2);
-      color:#1d4f2f;
-      padding:10px 18px;
-      border-radius:8px;
-      text-decoration:none;
-      font-size:15px;
-      font-weight:bold;
-      margin-bottom:18px;
-      border:1px solid rgba(255,255,255,0.4);
-      backdrop-filter:blur(4px);
-      -webkit-backdrop-filter:blur(4px);
-    ">
-      Scrivici via email
-    </a>
+.btn{
+    display:block;
+    width:100%;
+    padding:14px;
+    margin-bottom:16px;
+    border-radius:10px;
+    text-decoration:none;
+    font-weight:bold;
+    font-size:18px;
+    color:#1d4f2f;
+    background:rgba(255,255,255,.2);
+    border:1px solid rgba(255,255,255,.45);
+    backdrop-filter:blur(4px);
+}
 
-    <a href="https://instagram.com/dapalmaapalma/" target="_blank" style="
-      display:block;
-      background:rgba(255,255,255,0.2);
-      color:#1d4f2f;
-      padding:10px 18px;
-      border-radius:8px;
-      text-decoration:none;
-      font-size:15px;
-      font-weight:bold;
-      margin-bottom:18px;
-      border:1px solid rgba(255,255,255,0.4);
-      backdrop-filter:blur(4px);
-      -webkit-backdrop-filter:blur(4px);
-    ">
-      Instagram
-    </a>
+.whatsapp{
+    display:inline-block;
+    background:#25D366;
+    color:#fff;
+    padding:14px 28px;
+    border-radius:10px;
+    text-decoration:none;
+    font-size:20px;
+    font-weight:bold;
+    margin-top:10px;
+}
 
-    <a href="https://wa.me/41765468541" target="_blank" style="
-      display:inline-block;
-      background:#25D366;
-      color:white;
-      padding:12px 20px;
-      border-radius:8px;
-      font-size:16px;
-      text-decoration:none;
-      font-weight:bold;
-      margin-top:10px;
-    ">
-      WhatsApp
-    </a>
+@media (max-width:768px){
 
-  </div>
+    .bg{
+        object-fit:cover;
+        object-position:center bottom;
+        opacity:.95;
+    }
+
+    .container{
+        padding-top:50px;
+    }
+
+    h1{
+        font-size:28px;
+    }
+
+    .email{
+        font-size:18px;
+    }
+
+    .btn{
+        font-size:16px;
+        padding:13px;
+    }
+
+    .whatsapp{
+        font-size:18px;
+    }
+}
+</style>
+
+</head>
+
+<body>
+
+<img src="logo.png" class="bg" alt="Logo">
+
+<div class="container">
+
+<div class="content">
+
+<h1>Manutenzione e abbattimento palme</h1>
+
+<div class="email">info@dapalmaapalma.ch</div>
+
+<a class="btn" href="mailto:info@dapalmaapalma.ch">
+Scrivici via email
+</a>
+
+<a class="btn" href="https://instagram.com/dapalmaapalma/" target="_blank">
+Instagram
+</a>
+
+<a class="whatsapp" href="https://wa.me/41765468541" target="_blank">
+WhatsApp
+</a>
+
+</div>
+
+</div>
 
 </body>
 </html>
