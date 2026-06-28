@@ -1,6 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="it">
+
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Da Palma a Palma</title>
 </head>
 
@@ -8,16 +11,21 @@
   margin:0;
   font-family:Arial, sans-serif;
   text-align:center;
-  height:100vh;
+  min-height:100vh;
   display:flex;
-  align-items:flex-start;
   justify-content:center;
+  align-items:flex-start;
   background-image:url('logo.png');
   background-size:cover;
   background-position:center;
+  background-repeat:no-repeat;
 ">
 
-  <div style="margin-top:80px;">
+  <div style="
+    width:90%;
+    max-width:420px;
+    margin-top:80px;
+  ">
 
     <h1 style="
       font-size:28px;
@@ -48,12 +56,13 @@
       font-weight:bold;
       margin-bottom:18px;
       border:1px solid rgba(255,255,255,0.4);
-      backdrop-filter: blur(4px);
+      backdrop-filter:blur(4px);
+      -webkit-backdrop-filter:blur(4px);
     ">
       Scrivici via email
     </a>
 
-    <a href="https://instagram.com/dapalmaapalma/" style="
+    <a href="https://instagram.com/dapalmaapalma/" target="_blank" style="
       display:block;
       background:rgba(255,255,255,0.2);
       color:#1d4f2f;
@@ -64,12 +73,13 @@
       font-weight:bold;
       margin-bottom:18px;
       border:1px solid rgba(255,255,255,0.4);
-      backdrop-filter: blur(4px);
+      backdrop-filter:blur(4px);
+      -webkit-backdrop-filter:blur(4px);
     ">
       Instagram
     </a>
 
-    <a href="https://wa.me/41765468541" style="
+    <a href="https://wa.me/41765468541" target="_blank" style="
       display:inline-block;
       background:#25D366;
       color:white;
@@ -77,6 +87,7 @@
       border-radius:8px;
       font-size:16px;
       text-decoration:none;
+      font-weight:bold;
       margin-top:10px;
     ">
       WhatsApp
