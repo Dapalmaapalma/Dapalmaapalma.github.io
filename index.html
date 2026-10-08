@@ -2,151 +2,280 @@
 <html lang="it">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Da Palma a Palma — Manutenzione e abbattimento palme</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Da Palma a Palma | Potatura e abbattimento palme in Ticino</title>
+<meta name="description" content="Da Palma a Palma: potatura, manutenzione e abbattimento di palme a Ponte Tresa, nel Luganese e in tutto il Ticino. Contattaci su WhatsApp o per telefono.">
+<link rel="canonical" href="https://www.dapalmaapalma.ch/">
+<meta name="theme-color" content="#e2c89d">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="it_CH">
+<meta property="og:site_name" content="Da Palma a Palma">
+<meta property="og:title" content="Da Palma a Palma | Potatura e abbattimento palme in Ticino">
+<meta property="og:description" content="Potatura, manutenzione e abbattimento di palme a Ponte Tresa, nel Luganese e in tutto il Ticino.">
+<meta property="og:url" content="https://www.dapalmaapalma.ch/">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Da Palma a Palma",
+  "description": "Potatura, manutenzione e abbattimento di palme a Ponte Tresa, nel Luganese e in tutto il Ticino.",
+  "url": "https://www.dapalmaapalma.ch/",
+  "telephone": "+41765468541",
+  "email": "info@dapalmaapalma.ch",
+  "areaServed": [
+    { "@type": "AdministrativeArea", "name": "Ponte Tresa" },
+    { "@type": "AdministrativeArea", "name": "Luganese" },
+    { "@type": "AdministrativeArea", "name": "Canton Ticino" }
+  ],
+  "sameAs": ["https://instagram.com/dapalmaapalma/"]
+}
+</script>
 
 <style>
   :root{
     --sand:#e2c89d;
     --forest:#1d4f2f;
-    --ink:#111;
+    --forest-dark:#14391f;
+    --ink:#161512;
     --surface:#faf5e9;
   }
 
   *{ box-sizing:border-box; }
 
   html{
-    height:100%;
+    -webkit-text-size-adjust:100%;
+    text-size-adjust:100%;
+    scroll-behavior:smooth;
   }
 
   body{
     margin:0;
-    min-height:100svh;
-    min-height:100vh;
     font-family:'Inter',Arial,sans-serif;
+    font-size:17px;
+    line-height:1.6;
     color:var(--ink);
     background:var(--sand);
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    padding:32px 20px;
-    position:relative;
-    overflow-x:hidden;
+    padding-left:env(safe-area-inset-left);
+    padding-right:env(safe-area-inset-right);
   }
 
-  .container{
-    position:relative;
-    z-index:1;
+  a{ color:var(--forest); }
+  a:focus-visible{
+    outline:3px solid var(--forest-dark);
+    outline-offset:3px;
+  }
+
+  .wrap{
     width:100%;
-    max-width:440px;
-    text-align:center;
+    max-width:1000px;
+    margin:0 auto;
+    padding:0 22px;
   }
 
-  .logo{
-    display:block;
-    width:min(420px, 88vw);
-    height:auto;
-    margin:0 auto 12px;
+  /* ---------- Hero ---------- */
+  .hero{
+    min-height:88vh;
+    min-height:88svh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:max(40px, env(safe-area-inset-top)) 0 48px;
   }
 
   h1{
-    font-family:'Fraunces',serif;
+    font-family:'Fraunces',Georgia,serif;
     font-weight:600;
-    font-size:clamp(30px, 6vw, 44px);
-    line-height:1.15;
+    font-size:clamp(52px, 15vw, 112px);
+    line-height:1.02;
+    letter-spacing:-0.02em;
     color:var(--forest);
-    margin:0 0 22px;
-    letter-spacing:-0.01em;
+    margin:0 0 20px;
   }
+  h1 span{ display:block; }
 
-  .email{
-    font-size:clamp(15px, 3.6vw, 17px);
-    font-weight:500;
-    color:var(--forest);
-    margin-bottom:30px;
-    word-break:break-word;
+  .lead{
+    font-size:clamp(18px, 4.6vw, 22px);
+    line-height:1.5;
+    max-width:30em;
+    margin:0 auto 32px;
   }
 
   .actions{
     display:flex;
     flex-direction:column;
     gap:12px;
+    max-width:420px;
+    margin:0 auto;
   }
 
   .btn{
     display:block;
-    width:100%;
-    padding:14px 20px;
-    border-radius:10px;
+    padding:16px 22px;
+    min-height:54px;
+    border-radius:12px;
     text-decoration:none;
-    font-size:16px;
+    text-align:center;
+    font-size:17px;
     font-weight:600;
-    font-family:'Inter',Arial,sans-serif;
-    transition:transform .15s ease, background-color .15s ease, border-color .15s ease;
+    transition:transform .15s ease, background-color .15s ease;
+    -webkit-tap-highlight-color:transparent;
   }
-
-  .btn:focus-visible{
-    outline:2px solid var(--forest-dark);
-    outline-offset:2px;
+  .btn-primary{
+    color:var(--surface);
+    background:var(--forest);
+    border:1.5px solid var(--forest);
   }
-
+  .btn-primary:hover{ background:var(--forest-dark); }
   .btn-outline{
     color:var(--forest);
     background:rgba(250,245,233,.55);
     border:1.5px solid var(--forest);
   }
+  .btn-outline:hover{ background:rgba(250,245,233,.9); }
+  .btn:active{ transform:scale(.98); }
 
-  .btn-outline:hover{
-    background:rgba(250,245,233,.85);
+  /* ---------- Sezioni ---------- */
+  section{ padding:56px 0; }
+  .on-surface{ background:var(--surface); }
+
+  h2{
+    font-family:'Fraunces',Georgia,serif;
+    font-weight:600;
+    font-size:clamp(30px, 7vw, 40px);
+    line-height:1.15;
+    color:var(--forest);
+    margin:0 0 28px;
+  }
+  h3{
+    font-family:'Fraunces',Georgia,serif;
+    font-weight:600;
+    font-size:clamp(22px, 5vw, 26px);
+    line-height:1.2;
+    color:var(--forest);
+    margin:0 0 8px;
   }
 
-  .btn-primary{
-    color:#fff;
-    background:#25D366;
-    border:1.5px solid #1fb659;
-    font-size:17px;
-    padding:16px 20px;
+  .services{
+    list-style:none;
+    margin:0;
+    padding:0;
+    display:grid;
+    gap:30px;
+  }
+  .services li{
+    border-left:4px solid var(--forest);
+    padding-left:20px;
+  }
+  .services p{ margin:0; max-width:30em; }
+
+  /* ---------- Contatti ---------- */
+  .contact-list{
+    list-style:none;
+    margin:0;
+    padding:0;
+  }
+  .contact-list li{ margin-bottom:4px; }
+  .contact-list a{
+    display:inline-block;
+    padding:8px 0;
+    font-weight:600;
   }
 
-  .btn-primary:hover{
-    background:#20bd5a;
+  footer{
+    padding:28px 0;
+    padding-bottom:max(40px, env(safe-area-inset-bottom));
+    font-size:14px;
+    text-align:center;
   }
 
-  .btn:active{
-    transform:scale(.98);
+  /* ---------- Schermi grandi (PC e tablet) ---------- */
+  @media (min-width:720px){
+    body{ font-size:18px; }
+    .actions{
+      flex-direction:row;
+      flex-wrap:wrap;
+      justify-content:center;
+      max-width:none;
+    }
+    .btn{ min-width:230px; }
+    .services{
+      grid-template-columns:1fr 1fr;
+      gap:48px;
+    }
+    section{ padding:80px 0; }
   }
 
   @media (prefers-reduced-motion: reduce){
+    html{ scroll-behavior:auto; }
     .btn{ transition:none; }
-  }
-
-  @media (max-width:380px){
-    body{ padding:36px 16px; }
-    h1{ margin-bottom:18px; }
   }
 </style>
 </head>
 
 <body>
 
-<div class="container">
+<header class="hero">
+  <div class="wrap">
+    <!-- Qui in futuro metteremo il logo -->
+    <h1><span>Da Palma</span> <span>a Palma</span></h1>
+    <p class="lead">Potatura, manutenzione e abbattimento di palme a Ponte Tresa, nel Luganese e in tutto il Ticino.</p>
 
-  <img class="logo" src="logo.png" alt="Da Palma a Palma">
-
-  <h1>Manutenzione e<br>abbattimento palme</h1>
-
-  <div class="email">info@dapalmaapalma.ch</div>
-
-  <div class="actions">
-    <a class="btn btn-outline" href="mailto:info@dapalmaapalma.ch">Scrivici via email</a>
-    <a class="btn btn-outline" href="https://instagram.com/dapalmaapalma/" target="_blank" rel="noopener">Seguici su Instagram</a>
-    <a class="btn btn-primary" href="https://wa.me/41765468541" target="_blank" rel="noopener">Scrivici su WhatsApp</a>
+    <div class="actions">
+      <a class="btn btn-primary" href="https://wa.me/41765468541" target="_blank" rel="noopener noreferrer">Scrivici su WhatsApp</a>
+      <a class="btn btn-outline" href="tel:+41765468541">Chiama +41 76 546 85 41</a>
+      <a class="btn btn-outline" href="mailto:info@dapalmaapalma.ch">Scrivici via email</a>
+    </div>
   </div>
+</header>
 
-</div>
+<main>
+
+  <section class="on-surface" id="servizi">
+    <div class="wrap">
+      <h2>Cosa facciamo</h2>
+      <ul class="services">
+        <li>
+          <h3>Manutenzione e potatura</h3>
+          <p>Pulizia della chioma e rimozione di foglie e frutti secchi, per tenere la palma in ordine e sicura.</p>
+        </li>
+        <li>
+          <h3>Abbattimento</h3>
+          <p>Abbattimento di palme troppo alte, malate o pericolanti.</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="contatti">
+    <div class="wrap">
+      <h2>Contatti</h2>
+      <ul class="contact-list">
+        <li>WhatsApp e telefono: <a href="tel:+41765468541">+41 76 546 85 41</a></li>
+        <li>Email: <a href="mailto:info@dapalmaapalma.ch">info@dapalmaapalma.ch</a></li>
+        <li>Instagram: <a href="https://instagram.com/dapalmaapalma/" target="_blank" rel="noopener noreferrer">@dapalmaapalma</a></li>
+      </ul>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    &copy; <span id="year">2026</span> Da Palma a Palma
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
 
 </body>
 </html>
